@@ -7,7 +7,7 @@ define('KITAB', 'Aplikasi/Kitab');
 
 # Fungsi Global
 require KITAB . '/Fungsi.php';
-require '../../belajar/google-api-php-client-2.2.1/vendor/autoload.php'; # Tambah api google
+require '../belajar/googleAPI/google-api-php-client-2.2.1/vendor/autoload.php'; # Tambah api google
 
 # Sentiasa menyediakan garis condong di belakang (/) pada hujung jalan
 define('SPORT', ':' . $_SERVER['SERVER_PORT']);
@@ -81,4 +81,6 @@ define('MSICBARU', serialize (
 		$e.'msic_v1',$e.'msic_bandingan',
 		$e.'msic',$e.'msic_nota_kaki')
 	));	
-define('CSE_KEY', 'AIzaSyD6ve6yqRMtIilchGO5hncaQpxVVZ7CtBg');
+/*define('CSE_KEY', 'AIzaSyD6ve6yqRMtIilchGO5hncaQpxVVZ7CtBg'); 
+define('GCSE_API_KEY', 'AIzaSyD1KORf2kRrS7r6n5rT4nwL9QBGD8QCAgk');
+define('GCSE_SEARCH_ENGINE_ID', '016724384925099384635:s9jmb6xrf-w');*/
