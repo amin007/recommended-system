@@ -119,7 +119,7 @@ class Homeadmin2 extends \Aplikasi\Kitab\Kawal
 		$this->papar->medan = array('category_name', 'item_id', 'website_id');
 		$medan = '`category_id`,`category_name`,`item_id`, `website_id`';
 
-		# untuk list data dari myTable
+		# untuk listdata dari myTable
 			$carian[] = array('fix'=>'x=','atau'=>'WHERE',
 			'medan'=>'delete_status','apa'=>'0');
 			$this->papar->senarai[$this->papar->myTable] = $this->tanya->
@@ -182,17 +182,16 @@ class Homeadmin2 extends \Aplikasi\Kitab\Kawal
 		//*/
 	}
 #==========================================================================================
-	public function list($action = NULL)
+	/*public function listData($action = NULL)
 	{
 		# Set pemboleubah utama
-		echo 'kite sekarang berada di kelas Homeadmin function list';
+		echo 'kite sekarang berada di kelas Homeadmin function listData';
 		//echo '<pre>sebelum:'; print_r($_POST); echo '</pre>';
 
 		# Set pemboleubah utama
 		list($myTable, $senarai, $medan)= $this->tanya->selectTable($action);
-		# bentuk tatasusunan
-		
-	}
+		# bentuk tatasusunan	
+	}*/
 #==========================================================================================
 	public function updateform($action = NULL, $cariID)
 	{
@@ -212,7 +211,7 @@ class Homeadmin2 extends \Aplikasi\Kitab\Kawal
 		echo '<pre>senarai:'; print_r($senarai); echo '</pre>';
 		echo '<pre>medan:'; print_r($medan); echo '</pre>';//*/
 
-		# untuk list data dari myTable
+		# untuk listdata dari myTable
 			$this->papar->senarai[$this->papar->myTable] = $this->tanya->
 				//tatasusunanCari(//	cariSql( 
 				cariSemuaData(
@@ -347,7 +346,7 @@ class Homeadmin2 extends \Aplikasi\Kitab\Kawal
 		echo '<pre>senarai:'; print_r($senarai); echo '</pre>';
 		echo '<pre>medan:'; print_r($medan); echo '</pre>';//*/
 
-		# untuk list data dari myTable
+		# untuk listdata dari myTable
 			$this->papar->senarai[$this->papar->myTable] = $this->tanya->
 				//tatasusunanCari(//	cariSql( 
 				cariSemuaData(
@@ -409,7 +408,7 @@ class Homeadmin2 extends \Aplikasi\Kitab\Kawal
 		echo '<pre>senarai:'; print_r($senarai); echo '</pre>';
 		echo '<pre>medan:'; print_r($medan); echo '</pre>';//*/
 
-		# untuk list data dari myTable
+		# untuk listdata dari myTable
 			$this->papar->senarai[$this->papar->myTable] = $this->tanya->
 				//tatasusunanCari(//	cariSql( 
 				cariSemuaData(
