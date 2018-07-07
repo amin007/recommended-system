@@ -7,7 +7,7 @@ define('KITAB', 'Aplikasi/Kitab');
 
 # Fungsi Global
 require KITAB . '/Fungsi.php';
-require '../belajar/googleAPI/google-api-php-client-2.2.1/vendor/autoload.php'; # Tambah api google
+//require '../belajar/googleAPI/google-api-php-client-2.2.1/vendor/autoload.php'; # Tambah api google
 
 # Sentiasa menyediakan garis condong di belakang (/) pada hujung jalan
 define('SPORT', ':' . $_SERVER['SERVER_PORT']);
@@ -58,9 +58,9 @@ else
 {	# isytihar tatarajah mysql
 	define('DB_TYPE', 'mysql');
 	define('DB_HOST', 'localhost');
-	define('DB_NAME', 'recommendationsystem');
-	define('DB_USER', 'root');
-	define('DB_PASS', 'root');
+	define('DB_NAME', '***');
+	define('DB_USER', '***');
+	define('DB_PASS', '***');
 	# isytihar lokasi folder js
 	define('SUMBER', 'http://' . $_SERVER['SERVER_NAME'] . '/sumberoffline/');
 	define('JQUERY', $jquery_cdn);
