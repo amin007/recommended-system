@@ -81,7 +81,53 @@ class Homeuser_Tanya extends \Aplikasi\Kitab\Tanya
 		return $senaraiData;
 	}
 #---------------------------------------------------------------------------------------------------#
+	public function updateForm($medanID)
+	{
+			$myTable = 'admin_item2';
+			$senarai = array('admin_item2');
+			$medan = '`rating`';
+			$cariMedan = 'item_id';
+			$updateLink = 'form_update_item';
+			$deleteLink = 'item/list/';
+
+			return array($myTable, $senarai, $medan, $cariMedan, $updateLink, $deleteLink);
+	}
+#---------------------------------------------------------------------------------------------------#
+	public function semakPost2($post, $myTable2, $senaraiJadual, $medanID, $dataID)
+	{
+		//echo '<pre>$post='; print_r($post); echo '</pre>';
+		//unset($post[$myTable2][0]['simpan']);
+
+		$posmen = array();
+		foreach ($post as $myTable => $value)
+			if ( in_array($myTable,$senaraiJadual) )
+				foreach ($value as $key => $value2)
+					foreach ($value2 as $kekunci => $papar)
+						$posmen[$myTable][$kekunci] = bersih($papar);
+						//echo "$kekunci";
+		# $myTable2 untuk cari primary key.
+		$posmen[$myTable2][$medanID] = bersih($dataID);
+		return $posmen;
+	}
+#---------------------------------------------------------------------------------------------------#
+	function dataWebsite($searchItem)
+	{
+		$myTable = 'admin_item2';
+		$medan = 'search_item, item_website, count(*) as `total item recommend`';
+		$carian[] = array('fix'=>'x>','atau'=>'WHERE',
+		'medan'=>'rating','apa'=>'3');
+		$carian[] = array('fix'=>'%like%','atau'=>'AND',
+		'medan'=>'search_item','apa'=>$searchItem);
+		$susun[0]['susun'] = '3 DESC';
+		$susun[0]['kumpul'] = '1, 2';
+		//$susun[0]['dari'];
+		$susun[0]['max'] = '3';
+
+		return array($myTable, $medan, $carian, $susun);
+	}
 #---------------------------------------------------------------------------------------------------#
 #---------------------------------------------------------------------------------------------------#
+#---------------------------------------------------------------------------------------------------#
+
 #====================================================================================================
 }
