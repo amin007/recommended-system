@@ -1,4 +1,4 @@
-#web-online-shopping-recommendation-system
+# web online shopping recommendation system
 
 Ini adalah Sistem berkenaan tentang recommended barang di website ecommerce
 Ia terdiri dari 4 bahagian utama
