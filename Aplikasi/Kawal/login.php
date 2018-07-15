@@ -80,8 +80,9 @@ class Login extends \Aplikasi\Kitab\Kawal
 
 	function salah()
 	{
+		//echo '<hr>Nama class :' . __METHOD__ . '<hr>';
 		# debug
-		//$this->tanya->dapatid($_POST['password']);
+		$this->tanya->dapatid($_POST['password']);
 		$this->papar->mesej = 'Ada masalah pada user dan password';
 
 		# Set pemboleubah utama
