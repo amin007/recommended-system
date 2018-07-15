@@ -44,8 +44,7 @@ class Login_Tanya extends \Aplikasi\Kitab\Tanya
 						$posmen[$myTable][0][$kekunci] = bersih($papar);
 						//echo "$kekunci";
 
-		# pulangkan pemboleubah
-		return $posmen;		
+		return $posmen; # pulangkan pembolehubah
 	}
 	
 	public function ubahPosmen($posmen, $myTable)
